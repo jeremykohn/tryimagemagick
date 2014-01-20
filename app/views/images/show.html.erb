@@ -1,7 +1,8 @@
-<h2>Converted Image</h2>
+<h2>Original & converted images</h2>
 <br>
 <p>
-  <strong>Command-line options: </strong>"<%= @image.command %>"
+  <strong>Conversion command-line options:</strong><br>
+  <%= @image.command %>
 </p>
 
 <p>
@@ -9,5 +10,8 @@
   <%= image_tag "/uploads/pictures/#{@image.id}/converted_image_from_controller.jpg", :style => "margin:20px; display:inline" %>
 </p>
 
+<%= link_to 'Upload and convert another image', new_image_path %> | <%=link_to 'All images', images_path %>
 
-<%= link_to 'Image list', new_image_path %>
+<p>
+  (If you don't see the converted image, double-check to make sure you uploaded the file and entered the <a href="http://www.imagemagick.org/script/command-line-options.php">options</a> correctly.)
+</p>

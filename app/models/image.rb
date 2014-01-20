@@ -25,10 +25,10 @@ class Image < ActiveRecord::Base
     command_line_input = "#{command_type} #{all_args}"
     logger.debug "******* command_line_input is #{command_line_input}"
     
-    MojoMagick::raw_command("#{command_type}", "#{all_args}")  
+#    MojoMagick::raw_command("#{command_type}", "#{all_args}")  
 
     # Or try shell commands
-    # %x[#{command_line_input}]
+     %x[#{command_line_input}]
     # system("#{command_line_input}")
     # `convert public/uploads/z.jpg -negate public/uploads/z2.jpg`
              #      Does string interpolation work with backticks?

@@ -1,1 +1,28 @@
-<%= link_to 'New Image', new_image_path %>
+<h3><%= link_to 'Click here to upload and convert a new image!', new_image_path %></h3>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image ID</th><th></th>
+      <th>Original image</th><th></th>
+      <th>Converted image</th><th></th>
+      <th>Command-line options</th><th></th>
+      <th>Show full size</th><th></th>
+      <th>Delete image</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+        <td><%= image.id %></td><td></td> 
+        <td><%= image_tag image.location, :style => "height:150px" %></td><td></td> 
+        <td><%= image_tag "/uploads/pictures/#{image.id}/converted_image_from_controller.jpg", :style => "height:150px" %></td><td></td> 
+        <td><%= image.command %></td><td></td>      
+        <td><%= link_to 'Show', image %></td><td></td> 
+        <td><%= link_to 'Delete', image, method: :delete, data: { confirm: 'Are you sure?' } %></td><td></td> 
+      </tr>
+    <% end %>
+  </tbody>
+</table>

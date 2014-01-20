@@ -1,4 +1,8 @@
-<h1>New image</h1>
+<h2>New image</h2>
+<h4><i>Upload and convert an image using ImageMagick's command-line options.</i></h4>
+<br>
+
+<img src="http://www.imagemagick.org/image/logo.jpg">
 
 <%= simple_form_for @image, :html => {:multipart => true} do |f| %>
   <%= f.error_notification %>
@@ -6,42 +10,29 @@
   <div class="form-inputs">
     <%= f.input :location, :label => 'Upload a JPG, GIF, or PNG' %>
     <br>
-    <%= f.input :command, :label => 'Enter convert options' %>    
+    <%= f.input :command, :label => 'Enter convert options' %> 
   </div>
-
-<br>
-
+    <br>
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
 <% end %>
-
 <br><br>
 
-<h1>Image list</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image ID</th><th></th>
-      <th>Original image</th><th></th>
-      <th>Converted image</th><th></th>
-      <th>Command-line options</th><th></th>
-      <th>Show full size</th><th></th>
-      <th>Delete image</th>
-    </tr>
-  </thead>
+<p>  
+  <strong>A few sample options you may like to try:</strong>
+  <br>
   
-  <tbody>
-    <% @images.each do |image| %>
-      <tr>
-        <td><%= image.id %></td><td></td> 
-        <td><%= image_tag image.location, :style => "height:150px" %></td><td></td> 
-        <td><%= image_tag "/uploads/pictures/#{image.id}/converted_image_from_controller.jpg", :style => "height:150px" %></td><td></td> 
-        <td><%= image.command %></td><td></td>      
-        <td><%= link_to 'Show', image %></td><td></td> 
-        <td><%= link_to 'Delete', image, method: :delete, data: { confirm: 'Are you sure?' } %></td><td></td> 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<br>  -vignette 10x10+10+10% <a href="http://www.imagemagick.org/script/command-line-options.php#vignette">(Creates a vignette effect around the image)</a>
+<br>  -radial-blur 20 <a href="http://www.imagemagick.org/script/command-line-options.php#radial-blur">(Creates a rotational blur around the center of the image)</a>
+<br>  +polaroid <a href="http://www.imagemagick.org/script/command-line-options.php#polaroid">(Adds a Polaroid-like border and rotates picture at a random angle)</a>
+<br>  -charcoal 5 <a href="http://www.imagemagick.org/script/command-line-options.php#charcoal">(Simulates a charcoal drawing)</a>
+<br>  -negate <a href="http://www.imagemagick.org/script/command-line-options.php#negate">(Inverts the image colors)</a>
+
+
+
+
+<br><br>
+Check out the <a href="http://www.imagemagick.org/script/index.php"><u>official ImageMagick website</u></a> for a complete list of <a href="http://www.imagemagick.org/script/command-line-options.php"><u>image-conversion options</u></a> and how to use them!
+</p>
+
