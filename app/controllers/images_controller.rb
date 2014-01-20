@@ -30,7 +30,6 @@ class ImagesController < ApplicationController
 
     @image = Image.new(image_params) # Creates uploaded file with id and options.
     
-    
     respond_to do |format|
       if @image.save
         format.html { redirect_to @image, notice: 'Image was successfully created.' }
@@ -90,12 +89,6 @@ class ImagesController < ApplicationController
         format.json { render json: @image.errors, status: :unprocessable_entity }
       end
     end
-    
-    # After updating image options
-    input_file = 
-    output_file = 
-    @image.convert_single_image(input_file, options, output_file)
-
     
   end
 
