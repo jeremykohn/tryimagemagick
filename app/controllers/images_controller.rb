@@ -52,7 +52,7 @@ class ImagesController < ApplicationController
     
     dir = "public/uploads/pictures/#{@image.id}"
     input_file = "#{dir}/uploaded_image"
-    output_file = "#{dir}/converted_image_from_controller"
+    output_file = "#{dir}/converted_image_from_controller.jpg"
     
     logger.debug "* * * * * * * * * * dir is #{dir} * * * * * * * * * * * "
     logger.debug "* * * * * * * * * * location of original is #{input_file} * * * * * * * * * * * "
