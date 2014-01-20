@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Filename:</strong>
-  <%= @image.filename %>
+  <strong>Preview:</strong>
+  <%= image_tag @image.location, :style => "margin:20px; display:inline" %>
+  <%= image_tag "/uploads/pictures/#{@image.id}/converted_image_from_controller", :style => "margin:20px; display:inline" %>
 </p>
 
 <p>
-  <strong>Command:</strong>
+  <strong>Options:</strong>
   <%= @image.command %>
 </p>
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', images_path %>
+<%= link_to 'Image list', new_image_path %>

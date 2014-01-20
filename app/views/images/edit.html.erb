@@ -1,6 +1,21 @@
 <h1>Editing image</h1>
 
-<%= render 'form' %>
+<%= simple_form_for @image, :html => {:multipart => true} do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :filename %>
+    <%= f.input :command %>
+    <%= f.input :location, :label => 'Your image please' %>
+  </div>
+
+<br>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
 
 <%= link_to 'Show', @image %> |
-<%= link_to 'Back', images_path %>
+<%= link_to 'Image list', new_image_path %>

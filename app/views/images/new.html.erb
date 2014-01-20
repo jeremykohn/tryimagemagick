@@ -1,5 +1,55 @@
 <h1>New image</h1>
 
-<%= render 'form' %>
+<%= simple_form_for @image, :html => {:multipart => true} do |f| %>
+  <%= f.error_notification %>
 
-<%= link_to 'Back', images_path %>
+  <div class="form-inputs">
+    <%= f.input :location, :label => 'Upload an image' %>
+    <br>
+    <%= f.input :command, :label => 'Enter convert options' %>    
+  </div>
+
+<br>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+
+
+<h1>Listing images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Filename</th>
+      <th>Location</th>
+      <th>Image</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+        <td><%= image.id %>
+        <td><%= image.filename %></td>
+        <td><%= image.location %></td>
+        <td>(Image tag here)</td>
+        <td><%= link_to 'Show', image %></td>
+        <td><%= link_to 'Edit', edit_image_path(image) %></td>
+        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+
+

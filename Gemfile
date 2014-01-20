@@ -33,3 +33,10 @@ end
 gem 'rails_12factor', group: :production
 
 gem 'carrierwave'
+gem 'mini_magick'
+gem 'mojo_magick'
+gem 'simple_form_fancy_uploads'
+
+
+
+

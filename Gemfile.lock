@@ -83,8 +83,11 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_magick (3.7.0)
+      subexec (~> 0.2.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
+    mojo_magick (0.5.4)
     multi_json (1.8.4)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
@@ -135,6 +138,10 @@ GEM
     simple_form (3.0.1)
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)
+    simple_form_fancy_uploads (0.1.0)
+      carrierwave
+      rails (~> 4.0.0)
+      simple_form (~> 3.0.0)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -144,6 +151,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    subexec (0.2.3)
     thin (1.6.1)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -180,6 +188,8 @@ DEPENDENCIES
   hub
   jbuilder (~> 1.2)
   jquery-rails
+  mini_magick
+  mojo_magick
   pg
   quiet_assets
   rails (= 4.0.2)
@@ -188,6 +198,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.0)
   simple_form
+  simple_form_fancy_uploads
   thin
   turbolinks
   uglifier (>= 1.3.0)
