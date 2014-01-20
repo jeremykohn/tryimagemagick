@@ -15,4 +15,3 @@ Preferences:
 {:git=>true, :apps4=>"none", :dev_webserver=>"thin", :prod_webserver=>"thin", :database=>"postgresql", :templates=>"erb", :unit_test=>"rspec", :integration=>"rspec-capybara", :continuous_testing=>"none", :fixtures=>"none", :frontend=>"bootstrap3", :email=>"gmail", :authentication=>"none", :authorization=>"none", :form_builder=>"simple_form", :starter_app=>"home_app", :rvmrc=>true, :quiet_assets=>true, :local_env_file=>true, :better_errors=>true, :jsruntime=>false, :github=>true}
 
 ________________________
-
