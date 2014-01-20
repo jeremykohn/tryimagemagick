@@ -23,4 +23,4 @@ h2. Credits
 
 Try ImageMagick was generated with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.io/.
 
-It also makes use of Ruby gems such as "Simple Form":https://github.com/plataformatec/simple_form and "MojoMagick":https://github.com/rcode5/mojo_magick?source=cc, as well as "Twitter Bootstrap":http://getbootstrap.com/ for styling.
+It also makes use of Ruby gems such as "Simple Form":https://github.com/plataformatec/simple_form "MojoMagick":https://github.com/rcode5/mojo_magick?source=cc, and "CarrierWave":https://github.com/carrierwaveuploader/carrierwave, as well as "Twitter Bootstrap":http://getbootstrap.com/ for styling.
