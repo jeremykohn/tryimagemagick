@@ -8,10 +8,7 @@ This application requires:
 
 * Ruby version 2.0.0
 * Rails version 4.0.2
-
-h2. Database
-
-This application uses PostgreSQL with ActiveRecord.
+* PostgreSQL with ActiveRecord
 
 h2. Contributing
 
