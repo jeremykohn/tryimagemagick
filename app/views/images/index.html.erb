@@ -4,9 +4,9 @@
 <table>
   <thead>
     <tr>
-      <th>Command-line options</th><th width="10"></th>     
       <th>Original image</th><th width="10"></th>
       <th>Converted image</th><th width="10"></th>     
+      <th>Command-line options</th><th width="10"></th>
       <th>Show full size</th><th width="10"></th>
       <th>Delete image</th>
     </tr>
@@ -15,9 +15,9 @@
   <tbody>
     <% @images.each do |image| %>
       <tr>
-        <td><%= image.command %></td><td width="10"></td>
         <td><%= image_tag image.location, :style => "height:150px" %></td><td width="10"></td> 
         <td><%= image_tag "/uploads/pictures/#{image.id}/converted_image.jpg", :style => "height:150px" %></td><td width="10"></td> 
+        <td><%= image.command %></td><td width="10"></td>
         <td><%= link_to 'Show', image %></td><td width="10"></td>
         <td><%= link_to 'Delete', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
