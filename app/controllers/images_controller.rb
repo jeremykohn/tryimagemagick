@@ -26,7 +26,7 @@ class ImagesController < ApplicationController
   # POST /images
   # POST /images.json
   def create
-    logger.debug "* * * * * * * * * * image#create was called * * * * * * * * * * * "
+    # logger.debug "* * * * * * * * * * image#create was called * * * * * * * * * * * "
 
     @image = Image.new(image_params) # Creates uploaded file with id and options.
     
@@ -39,41 +39,24 @@ class ImagesController < ApplicationController
         format.json { render json: @image.errors, status: :unprocessable_entity }
       end
     end
-    
-  
-    logger.debug "* * * * * * new image saved * * * * * * *"
- 
-    logger.debug "* * * * * * * * * * the image id is #{@image.id} * * * * * * * * * * * "
-    
-    # Now set the rest of the image parameters. Actually are they image parameters?
-    # Or will they be in the next version?
-    # For now, just display options in view. Can display full command in view later.
+    # logger.debug "* * * * * * new image saved * * * * * * *"
+
+    # logger.debug "* * * * * * * * * * the image id is #{@image.id} * * * * * * * * * * * "
     
     dir = "public/uploads/pictures/#{@image.id}"
     input_file = "#{dir}/uploaded_image"
-    output_file = "#{dir}/converted_image_from_controller.jpg"
+    output_file = "#{dir}/converted_image.jpg"
     
-    logger.debug "* * * * * * * * * * dir is #{dir} * * * * * * * * * * * "
-    logger.debug "* * * * * * * * * * location of original is #{input_file} * * * * * * * * * * * "
-    logger.debug "* * * * * * * * * * location of edited is #{output_file} * * * * * * * * * * * "
+    # logger.debug "* * * * * * * * * * dir is #{dir} * * * * * * * * * * * "
+    # logger.debug "* * * * * * * * * * location of original is #{input_file} * * * * * * * * * * * "
+    # logger.debug "* * * * * * * * * * location of edited is #{output_file} * * * * * * * * * * * "
  
-    options = @image.command # "-negate" # Replace this with user input, like "command" field in this resource
+    options = @image.command
     
-    logger.debug "****** conversion by controller *******"
+    # logger.debug "****** conversion by controller *******"
   
     @image.convert_single_image(input_file, options, output_file)
   
-    
-  # Or,
-    # `convert public/uploads/c.jpg -negate public/uploads/c2.jpg` #This works. Converts negated into original image.
-    # %x[#{command_line_input}]   
-    # THIS WORKS FOR IMAGE CONVERSION!  Converted 'converted.jpg' to 'converted2.jpg'
-    # Now just have to move both the converted and original images to the view.
-    # And systematically name the filepaths.
-
-    
-    
-    
   end
 
   # PATCH/PUT /images/1
