@@ -10,9 +10,7 @@ This application requires:
 * Rails version 4.0.2
 * PostgreSQL with ActiveRecord
 
-h2. Contributing
-
-Feel free to get involved!
+h2. Feel free to get involved!
 
 * Fork the project on GitHub.
 * Make your feature addition or bug fix.
