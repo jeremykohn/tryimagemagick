@@ -1,9 +1,23 @@
+
+<div id="header">
 <h2>New image</h2>
-<h4><i>Upload and convert an image using ImageMagick's command-line options.</i></h4>
-<br>
+<h4><em>Upload and convert an image using ImageMagick's command-line options.</em></h4>
+
+<u><%=link_to 'View all images', images_path %></u>
+<br><br>
+</div>
+
+<center>
+
+<div id="logo">
 
 <img src="http://www.imagemagick.org/image/logo.jpg">
+<br><br>
+</div>
 
+
+<div id="form">
+<p>
 <%= simple_form_for @image, :html => {:multipart => true} do |f| %>
   <%= f.error_notification %>
 
@@ -18,23 +32,28 @@
   </div>
 <% end %>
 <br><br>
+</p>
+</div>
 
+<div id="sample-options">
 <p>  
   <strong>A few sample options you may like to try:</strong>
-  <br>
+</p>
 
-<br>  -negate <a href="http://www.imagemagick.org/script/command-line-options.php#negate">(Inverts the image colors)</a>
-<br>  -raise 15 <a href="http://www.imagemagick.org/script/command-line-options.php#raise">(Creates a 3-D raised border effect)</a>  
-<br>  +polaroid <a href="http://www.imagemagick.org/script/command-line-options.php#polaroid">(Adds a Polaroid-like border and rotates picture at a random angle)</a>
-<br>  -vignette 10x10+10+10% <a href="http://www.imagemagick.org/script/command-line-options.php#vignette">(Creates a vignette effect around the image)</a>
-<br>  -charcoal 5 <a href="http://www.imagemagick.org/script/command-line-options.php#charcoal">(Simulates a charcoal drawing)</a>
+<p>
+-negate <a href="http://www.imagemagick.org/script/command-line-options.php#negate">(Inverts the image colors)</a><br>
+-raise 15 <a href="http://www.imagemagick.org/script/command-line-options.php#raise">(Creates a 3-D raised border effect)</a><br>
++polaroid <a href="http://www.imagemagick.org/script/command-line-options.php#polaroid">(Adds a Polaroid-like border and rotates picture at a random angle)</a><br>
+-vignette 10x10+10+10% <a href="http://www.imagemagick.org/script/command-line-options.php#vignette">(Creates a vignette effect around the image)</a><br>
+-charcoal 5 <a href="http://www.imagemagick.org/script/command-line-options.php#charcoal">(Simulates a charcoal drawing)</a>
+</p>
+</div>
 
+<br>
 
-
-  
-<br><br>
+<div id="imagemagick-links">
+<p>
 Check out the <a href="http://www.imagemagick.org/script/index.php"><u>official ImageMagick website</u></a> for a complete list of <a href="http://www.imagemagick.org/script/command-line-options.php"><u>image-conversion options</u></a> and how to use them!
 </p>
 
-<br><br><br>
-<%=link_to 'View all images', images_path %>
+</center>
