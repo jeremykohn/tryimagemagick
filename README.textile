@@ -10,13 +10,6 @@ This application requires:
 * Rails version 4.0.2
 * PostgreSQL with ActiveRecord
 
-h2. Feel free to get involved!
-
-* Fork the project on GitHub.
-* Make your feature addition or bug fix.
-* Commit with Git.
-* Send the author a pull request.
-
 h2. Credits
 
 Try ImageMagick was generated with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.io/.
